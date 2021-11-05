@@ -23,7 +23,11 @@ const checkBalResponse = await new AccountBalanceQuery()
 .setAccountId(checkBalAccId)
 .execute(client);
 
+//Display hbar balance
 console.log("The balance in the account " + checkBalAccId + " is " + checkBalResponse.hbars.toTinybars() + " tiny bars");
+
+//Display token balance
+console.log("The number of tokens in " + checkBalAccId + " is " + checkBalResponse.tokens.toString());
 
 }
 main();
